@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1941099,      40801]
-NotebookOptionsPosition[   1936463,      40646]
-NotebookOutlinePosition[   1937631,      40684]
-CellTagsIndexPosition[   1937497,      40678]
+NotebookDataLength[   1948837,      41000]
+NotebookOptionsPosition[   1943871,      40836]
+NotebookOutlinePosition[   1945043,      40874]
+CellTagsIndexPosition[   1944909,      40868]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,43 +61,229 @@ Cell[CellGroupData[{
 
 Cell["Testing", "Section"],
 
+Cell[BoxData["Quit"], "Input"],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"RandomSobolComplexes", "[", 
+ RowBox[{"NSolve", "[", 
   RowBox[{
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"0", ",", 
-       RowBox[{"1", "+", "\[ImaginaryI]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"2", ",", 
-       RowBox[{"3", "+", "\[ImaginaryI]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"-", "4"}], "-", "\[ImaginaryI]"}], ",", 
-       RowBox[{"5", "+", 
-        RowBox[{"10", "\[ImaginaryI]"}]}]}], "}"}]}], "}"}], ",", "5"}], 
-  "]"}]], "Input"],
-
-Cell[BoxData[
- RowBox[{"a", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"0", ",", 
-     RowBox[{"1", "+", "\[ImaginaryI]"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2", ",", 
-     RowBox[{"3", "+", "\[ImaginaryI]"}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{
-      RowBox[{"-", "4"}], "-", "\[ImaginaryI]"}], ",", 
-     RowBox[{"5", "+", 
-      RowBox[{"10", " ", "\[ImaginaryI]"}]}]}], "}"}]}], "]"}]], "Output"]
-}, Open  ]]
+      RowBox[{"1", "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"Sin", "[", "t", "]"}]}], ")"}], "2"]}], "\[Equal]", 
+      RowBox[{"0.1", 
+       RowBox[{"Sin", "[", "tt", "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"2", "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"Sin", "[", "tt", "]"}]}], ")"}], "2"]}], "\[Equal]", 
+      RowBox[{"0.01", 
+       RowBox[{"Cos", "[", "t", "]"}]}]}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "tt"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \[NoBreak]\\!\\(NSolve\
+\\)\[NoBreak], so some solutions may not be found; use Reduce for complete \
+solution information. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \\\"NSolve::ifun\\\"]\\)\
+\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"0.6396250384221507`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.006890334512785`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.5463772114522667`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.2752061093459894`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"0.6396250384221507`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.006890334512785`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.5463772114522667`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.2752061093459894`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"0.7257558920023843`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.0614897813342163`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.54371560437586`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.2739001712896645`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"0.7257558920023843`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.0614897813342163`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.54371560437586`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.2739001712896645`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"2.415467472378068`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.061518616221333`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.5444517374805437`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.2794589097713167`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"2.415467472378068`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.061518616221333`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.5444517374805437`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.2794589097713167`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"2.5023369043769845`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.0069191738194057`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.5418155620555399`", "\[VeryThinSpace]", "-", 
+       RowBox[{"1.2781698645502828`", " ", "\[ImaginaryI]"}]}]}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"t", "\[Rule]", 
+      RowBox[{"2.5023369043769845`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.0069191738194057`", " ", "\[ImaginaryI]"}]}]}], ",", 
+     RowBox[{"tt", "\[Rule]", 
+      RowBox[{"0.5418155620555399`", "\[VeryThinSpace]", "+", 
+       RowBox[{"1.2781698645502828`", " ", "\[ImaginaryI]"}]}]}]}], "}"}]}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"results", "=", 
+     RowBox[{"FindComplexRoots", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"1", "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"Sin", "[", "t", "]"}]}], ")"}], "2"]}], "\[Equal]", 
+          RowBox[{"0.001", 
+           RowBox[{"Sin", "[", "tt", "]"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"1", "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "+", 
+              RowBox[{"Sin", "[", "tt", "]"}]}], ")"}], "2"]}], "\[Equal]", 
+          RowBox[{"0.001", 
+           RowBox[{"Cos", "[", "t", "]"}]}]}]}], "}"}], "\[IndentingNewLine]",
+        ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{
+          RowBox[{"-", "2"}], "\[ImaginaryI]"}], ",", 
+         RowBox[{
+          RowBox[{"2", "\[Pi]"}], "+", 
+          RowBox[{"2", "\[ImaginaryI]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"tt", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"2", "\[Pi]"}], "+", 
+          RowBox[{"2", "\[ImaginaryI]"}]}]}], "}"}], "\[IndentingNewLine]", 
+       ",", 
+       RowBox[{"SeedGenerator", "\[Rule]", "RandomSobolComplexes"}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"Seeds", "\[Rule]", "100"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"Tolerance", "\[Rule]", "0.01"}]}], "\[IndentingNewLine]", 
+      "]"}]}], ")"}], "//", "Sort"}], "//", "Length"}], "\[IndentingNewLine]", 
+ RowBox[{"ListPointPlot3D", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ReIm", "[", "t", "]"}], ",", 
+       RowBox[{"Re", "[", "tt", "]"}]}], "}"}], "]"}], "/.", "results"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "450"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "\[Pi]"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Pi]", ",", 
+        RowBox[{"2", "\[Pi]"}]}], "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+   ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"PointSize", "[", "Large", "]"}]}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input"],
+
+Cell[BoxData["8"], "Output"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {RGBColor[0.3315753, 0.4561011, 0.6388182], PointSize[Large], 
+   Point3DBox[{{2.4758134819737343`, 1.0613838742820223`, 
+    5.616946199760556}, {0.6657796713661254, 1.0613838740322712`, 
+    3.8078321604037577`}, {0.6663476162408773, -1.0617351137728794`, 
+    3.8082798181084176`}, {2.475244537598853, -1.0617351140223796`, 
+    5.6173930173394115`}, {2.475244537598853, 1.0617351140223796`, 
+    3.8073849434299687`}, {2.4758134819737343`, -1.0613838742820223`, 
+    3.8078317610088237`}, {0.6663476162408773, 1.0617351137728794`, 
+    5.616498142660962}, {0.6657796713661219, -1.061383874032272, 
+    5.616945800365622}}]},
+  Axes->True,
+  AxesLabel->{None, None, None},
+  BoxRatios->{1, 1, 0.4},
+  FaceGridsStyle->Automatic,
+  ImageSize->450,
+  PlotRange->
+   NCache[{{0, Pi}, {-2, 2}, {Pi, 2 Pi}}, {{0, 3.141592653589793}, {-2, 2}, {
+     3.141592653589793, 6.283185307179586}}],
+  PlotRangePadding->{{Automatic, Automatic}, {Automatic, Automatic}, {
+    Automatic, Automatic}},
+  Ticks->{Automatic, Automatic, Automatic},
+  ViewPoint->{0.17644601624516962`, -3.3585315313915727`, 0.3730050348182829},
+  
+  ViewVertical->{0.004018155236356236, -0.49904464420578837`, 
+   2.1664174019536473`}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData["RandomSobolComplexes"], "Input"],
+
+Cell[BoxData["Solve"], "Input"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -137,9 +323,13 @@ Cell[BoxData[{
 
 Cell[BoxData[
  StyleBox["\<\"FindComplexRoots[e1==e2, {z, zmin, zmax}] attempts to find \
-complex roots of the equation e1==e2 in the rectangle with corners zmin and \
-zmax.\"\>", "MSG"]], "Print", "PrintUsage",
- CellTags->"Info3664045866-8000383"],
+complex roots of the equation e1==e2 in the complex rectangle with corners \
+zmin and zmax.\\n\\nFindComplexRoots[{e1==e2, e3==e4, \[Ellipsis]}, {z1, \
+z1min, z1max}, {z2, z2min, z2max}, \[Ellipsis]] attempts to find complex \
+roots of the given system of equations in the multidimensional complex \
+rectangle with corners z1min, z1max, z2min, z2max, \[Ellipsis].\"\>", 
+  "MSG"]], "Print", "PrintUsage",
+ CellTags->"Info3664050785-6108272"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -166,16 +356,16 @@ Cell[BoxData[
  StyleBox["\<\"Seeds is an option for FindComplexRoots which determines how \
 many initial seeds are used to attempt to find roots of the given equation.\"\
 \>", "MSG"]], "Print", "PrintUsage",
- CellTags->"Info3664045866-8000383"],
+ CellTags->"Info3664050785-6108272"],
 
 Cell[BoxData[
  StyleBox["\<\"SeedGenerator is an option for FindComplexRoots which \
-determines the function used to generate the seeds for the internal FindRoot \
-call. Its value can be RandomComplex, RandomNiederreiterComplexes, \
+determines the function   used to generate the seeds for the internal \
+FindRoot call. Its value can be RandomComplex, RandomNiederreiterComplexes, \
 RandomSobolComplexes, DeterministicComplexGrid, or any function f such that \
 f[{zmin, zmax}, n] returns n complex numbers in the rectancle with corners \
 zmin and zmax.\"\>", "MSG"]], "Print", "PrintUsage",
- CellTags->"Info3664045866-8000383"],
+ CellTags->"Info3664050785-6108272"],
 
 Cell[BoxData[
  RowBox[{
@@ -187,7 +377,7 @@ specifies the tolerance that should be allowed in computing results.\"\>",
    Active->True,
    BaseStyle->"Link",
    ButtonData->"paclet:ref/Tolerance"]}]], "Print", "PrintUsage",
- CellTags->"Info3664045866-8000383"]
+ CellTags->"Info3664050785-6108272"]
 }, Open  ]]
 }, Open  ]],
 
@@ -40655,30 +40845,30 @@ StyleDefinitions->"Default.nb"
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "Info3664045866-8000383"->{
-  Cell[4176, 137, 248, 4, 42, "Print",
-   CellTags->"Info3664045866-8000383"],
-  Cell[5341, 164, 244, 4, 42, "Print",
-   CellTags->"Info3664045866-8000383"],
-  Cell[5588, 170, 477, 7, 78, "Print",
-   CellTags->"Info3664045866-8000383"],
-  Cell[6068, 179, 405, 10, 44, "Print",
-   CellTags->"Info3664045866-8000383"]},
+ "Info3664050785-6108272"->{
+  Cell[11299, 323, 531, 8, 95, "Print",
+   CellTags->"Info3664050785-6108272"],
+  Cell[12747, 354, 244, 4, 42, "Print",
+   CellTags->"Info3664050785-6108272"],
+  Cell[12994, 360, 479, 7, 78, "Print",
+   CellTags->"Info3664050785-6108272"],
+  Cell[13476, 369, 405, 10, 44, "Print",
+   CellTags->"Info3664050785-6108272"]},
  "Info3664045425-9158360"->{
-  Cell[576502, 13581, 2237, 35, 120, "Print",
+  Cell[583910, 13771, 2237, 35, 120, "Print",
    CellTags->"Info3664045425-9158360"],
-  Cell[578742, 13618, 266, 4, 60, "Print",
+  Cell[586150, 13808, 266, 4, 60, "Print",
    CellTags->"Info3664045425-9158360"],
-  Cell[579011, 13624, 280, 4, 60, "Print",
+  Cell[586419, 13814, 280, 4, 60, "Print",
    CellTags->"Info3664045425-9158360"],
-  Cell[579294, 13630, 253, 4, 42, "Print",
+  Cell[586702, 13820, 253, 4, 42, "Print",
    CellTags->"Info3664045425-9158360"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info3664045866-8000383", 1936791, 40657},
- {"Info3664045425-9158360", 1937138, 40666}
+ {"Info3664050785-6108272", 1944199, 40847},
+ {"Info3664045425-9158360", 1944550, 40856}
  }
 *)
 (*NotebookFileOutline
@@ -40695,111 +40885,120 @@ Cell[1337, 45, 511, 11, 51, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[1885, 61, 26, 0, 65, "Section"],
+Cell[1914, 63, 30, 0, 32, "Input"],
 Cell[CellGroupData[{
-Cell[1936, 65, 526, 17, 32, "Input"],
-Cell[2465, 84, 437, 14, 32, "Output"]
+Cell[1969, 67, 679, 22, 37, "Input"],
+Cell[2651, 91, 480, 10, 23, "Message"],
+Cell[3134, 103, 3034, 74, 99, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6205, 182, 2460, 68, 304, "Input"],
+Cell[8668, 252, 28, 0, 32, "Output"],
+Cell[8699, 254, 1243, 26, 248, "Output"]
+}, Open  ]],
+Cell[9957, 283, 46, 0, 32, "Input"],
+Cell[10006, 285, 31, 0, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10074, 290, 96, 1, 65, "Section"],
+Cell[CellGroupData[{
+Cell[10195, 295, 104, 1, 45, "Subsection"],
+Cell[10302, 298, 314, 6, 51, "Text"],
+Cell[10619, 306, 110, 1, 31, "Text"],
+Cell[10732, 309, 30, 0, 32, "Input"],
+Cell[CellGroupData[{
+Cell[10787, 313, 509, 8, 121, "Input"],
+Cell[11299, 323, 531, 8, 95, "Print",
+ CellTags->"Info3664050785-6108272"],
+Cell[11833, 333, 889, 17, 77, "Output"],
+Cell[CellGroupData[{
+Cell[12747, 354, 244, 4, 42, "Print",
+ CellTags->"Info3664050785-6108272"],
+Cell[12994, 360, 479, 7, 78, "Print",
+ CellTags->"Info3664050785-6108272"],
+Cell[13476, 369, 405, 10, 44, "Print",
+ CellTags->"Info3664050785-6108272"]
+}, Open  ]]
+}, Open  ]],
+Cell[13908, 383, 105, 1, 31, "Text"],
+Cell[CellGroupData[{
+Cell[14038, 388, 564, 17, 37, "Input"],
+Cell[14605, 407, 799, 19, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15441, 431, 1337, 38, 150, "Input"],
+Cell[16781, 471, 967, 23, 331, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2951, 104, 96, 1, 65, "Section"],
+Cell[17797, 500, 127, 1, 45, "Subsection"],
+Cell[17927, 503, 630, 10, 71, "Text"],
 Cell[CellGroupData[{
-Cell[3072, 109, 104, 1, 45, "Subsection"],
-Cell[3179, 112, 314, 6, 51, "Text"],
-Cell[3496, 120, 110, 1, 31, "Text"],
-Cell[3609, 123, 30, 0, 32, "Input"],
+Cell[18582, 517, 131, 1, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[3664, 127, 509, 8, 121, "Input"],
-Cell[4176, 137, 248, 4, 42, "Print",
- CellTags->"Info3664045866-8000383"],
-Cell[4427, 143, 889, 17, 77, "Output"],
-Cell[CellGroupData[{
-Cell[5341, 164, 244, 4, 42, "Print",
- CellTags->"Info3664045866-8000383"],
-Cell[5588, 170, 477, 7, 78, "Print",
- CellTags->"Info3664045866-8000383"],
-Cell[6068, 179, 405, 10, 44, "Print",
- CellTags->"Info3664045866-8000383"]
-}, Open  ]]
-}, Open  ]],
-Cell[6500, 193, 105, 1, 31, "Text"],
-Cell[CellGroupData[{
-Cell[6630, 198, 564, 17, 37, "Input"],
-Cell[7197, 217, 799, 19, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8033, 241, 1337, 38, 150, "Input"],
-Cell[9373, 281, 967, 23, 331, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[10389, 310, 127, 1, 45, "Subsection"],
-Cell[10519, 313, 630, 10, 71, "Text"],
-Cell[CellGroupData[{
-Cell[11174, 327, 131, 1, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[11330, 332, 4000, 84, 368, "Input"],
-Cell[15333, 418, 1113, 25, 80, "Output"]
+Cell[18738, 522, 4000, 84, 368, "Input"],
+Cell[22741, 608, 1113, 25, 80, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[16495, 449, 133, 1, 29, "Subsubsection"],
-Cell[16631, 452, 178, 4, 33, "Text"],
+Cell[23903, 639, 133, 1, 29, "Subsubsection"],
+Cell[24039, 642, 178, 4, 33, "Text"],
 Cell[CellGroupData[{
-Cell[16834, 460, 2130, 48, 341, "Input"],
-Cell[18967, 510, 19585, 386, 891, "Output"]
+Cell[24242, 650, 2130, 48, 341, "Input"],
+Cell[26375, 700, 19585, 386, 891, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[38601, 902, 154, 2, 29, "Subsubsection"],
+Cell[46009, 1092, 154, 2, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[38780, 908, 1863, 40, 319, "Input"],
-Cell[40646, 950, 534872, 12601, 377, "Output"]
+Cell[46188, 1098, 1863, 40, 319, "Input"],
+Cell[48054, 1140, 534872, 12601, 377, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[575579, 13558, 175, 2, 45, "Subsection"],
-Cell[575757, 13562, 434, 7, 71, "Text"],
+Cell[582987, 13748, 175, 2, 45, "Subsection"],
+Cell[583165, 13752, 434, 7, 71, "Text"],
 Cell[CellGroupData[{
-Cell[576216, 13573, 261, 4, 99, "Input"],
+Cell[583624, 13763, 261, 4, 99, "Input"],
 Cell[CellGroupData[{
-Cell[576502, 13581, 2237, 35, 120, "Print",
+Cell[583910, 13771, 2237, 35, 120, "Print",
  CellTags->"Info3664045425-9158360"],
-Cell[578742, 13618, 266, 4, 60, "Print",
+Cell[586150, 13808, 266, 4, 60, "Print",
  CellTags->"Info3664045425-9158360"],
-Cell[579011, 13624, 280, 4, 60, "Print",
+Cell[586419, 13814, 280, 4, 60, "Print",
  CellTags->"Info3664045425-9158360"],
-Cell[579294, 13630, 253, 4, 42, "Print",
+Cell[586702, 13820, 253, 4, 42, "Print",
  CellTags->"Info3664045425-9158360"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[579596, 13640, 124, 3, 35, "Subsubsection"],
+Cell[587004, 13830, 124, 3, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[579745, 13647, 1666, 41, 275, "Input"],
-Cell[581414, 13690, 11533, 229, 258, "Output"]
+Cell[587153, 13837, 1666, 41, 275, "Input"],
+Cell[588822, 13880, 11533, 229, 258, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[592996, 13925, 43, 0, 29, "Subsubsection"],
+Cell[600404, 14115, 43, 0, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[593064, 13929, 3142, 72, 473, "Input"],
-Cell[596209, 14003, 836150, 17772, 497, "Output"]
+Cell[600472, 14119, 3142, 72, 473, "Input"],
+Cell[603617, 14193, 836150, 17772, 497, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1432420, 31782, 38, 0, 36, "Subsection"],
-Cell[1432461, 31784, 804, 14, 150, "Text"],
+Cell[1439828, 31972, 38, 0, 36, "Subsection"],
+Cell[1439869, 31974, 804, 14, 150, "Text"],
 Cell[CellGroupData[{
-Cell[1433290, 31802, 908, 24, 121, "Input"],
-Cell[1434201, 31828, 499638, 8748, 643, "Output"]
+Cell[1440698, 31992, 908, 24, 121, "Input"],
+Cell[1441609, 32018, 499638, 8748, 643, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1933888, 40582, 37, 0, 37, "Subsection"],
-Cell[1933928, 40584, 400, 9, 109, "Text"],
-Cell[1934331, 40595, 2092, 46, 473, "Input"]
+Cell[1941296, 40772, 37, 0, 37, "Subsection"],
+Cell[1941336, 40774, 400, 9, 109, "Text"],
+Cell[1941739, 40785, 2092, 46, 473, "Input"]
 }, Closed]]
 }, Open  ]]
 }, Open  ]]

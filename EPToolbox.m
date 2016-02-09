@@ -19,8 +19,14 @@
 
 
 
-BeginPackage["EPToolbox`"]
+BeginPackage["EPToolbox`"];
 
+
+FindComplexRoots::usage="FindComplexRoots[e1==e2, {z, zmin, zmax}] attempts to find complex roots of the equation e1==e2 in the complex rectangle with corners zmin and zmax.
+
+FindComplexRoots[{e1==e2, e3==e4, \[Ellipsis]}, {z1, z1min, z1max}, {z2, z2min, z2max}, \[Ellipsis]] attempts to find complex roots of the given system of equations in the multidimensional complex rectangle with corners z1min, z1max, z2min, z2max, \[Ellipsis].";
+Seeds::usage="Seeds is an option for FindComplexRoots which determines how many initial seeds are used to attempt to find roots of the given equation.";
+SeedGenerator::usage="SeedGenerator is an option for FindComplexRoots which determines the function   used to generate the seeds for the internal FindRoot call. Its value can be RandomComplex, RandomNiederreiterComplexes, RandomSobolComplexes, DeterministicComplexGrid, or any function f such that f[{zmin, zmax}, n] returns n complex numbers in the rectancle with corners zmin and zmax.";
 
 Options[FindComplexRoots] = Join[Options[FindRoot], {Seeds -> 50, SeedGenerator -> RandomComplex, Tolerance -> Automatic, Verbose -> False}];
 SyntaxInformation[FindComplexRoots] = {"ArgumentsPattern" -> {_, {_, _, _}, OptionsPattern[]},    "LocalVariables" -> {"Table", {2, \[Infinity]}}};
@@ -32,42 +38,59 @@ Protect[SeedGenerator];
 
 
 Begin["`Private`"];
-FindComplexRoots[e1_ == e2_, {z_, zmin_, zmax_}, ops : OptionsPattern[]] := Module[{seeds},
-  If[! IntegerQ[Rationalize[OptionValue[Seeds]]] || OptionValue[Seeds] <= 0, 
-   Message[FindComplexRoots::seeds, OptionValue[Seeds]]];
-  If[! (OptionValue[Tolerance] === Automatic || OptionValue[Tolerance] >= 0), 
-   Message[FindComplexRoots::tol, OptionValue[Seeds]]];
-  
-  seeds = OptionValue[SeedGenerator][{zmin, zmax}, OptionValue[Seeds]];
-  
-  If[OptionValue[Verbose], Hold[], Hold[FindRoot::lstol]] /. {
-    Hold[messageSequence___] :> Quiet[
-      DeleteDuplicates[
-       Select[
-        Check[
-           FindRoot[e1 == e2, {z, #},
-            Evaluate[Sequence @@ FilterRules[{ops}, Options[FindRoot]]]
-            ]
-           , ## &[]
-           ] & /@ seeds
-        , (Re[zmin] < (Re[z] /. #) < Re[zmax] && 
-           Im[zmin] < (Im[z] /. #) < Im[zmax]) &]
-       , Abs[(z /. #1) - (z /. #2)] < If[
-          NumberQ[OptionValue[Tolerance]],
-          OptionValue[Tolerance],
-          
-          10^If[NumberQ[OptionValue[WorkingPrecision]], 
-            2 - OptionValue[WorkingPrecision], 2 - $MachinePrecision]
-          ] &]
-      , {messageSequence}]}
-  ]
+FindComplexRoots[equations_List,domainSpecifiers__, ops : OptionsPattern[]] := Block[{seeds,tolerances},
+If[! IntegerQ[Rationalize[OptionValue[Seeds]]] || OptionValue[Seeds]<=0,Message[FindComplexRoots::seeds, OptionValue[Seeds]]];If[! (OptionValue[Tolerance] === Automatic || OptionValue[Tolerance]>=0),Message[FindComplexRoots::tol, OptionValue[Seeds]]];
+
+seeds=OptionValue[SeedGenerator][{domainSpecifiers}[[All,{2,3}]],OptionValue[Seeds]];
+tolerances=Which[
+ListQ[OptionValue[Tolerance]],OptionValue[Tolerance],
+True,ConstantArray[
+Which[
+NumberQ[OptionValue[Tolerance]],OptionValue[Tolerance],
+True,10^If[NumberQ[OptionValue[WorkingPrecision]], 2-OptionValue[WorkingPrecision],2-$MachinePrecision]
+]
+,Length[{domainSpecifiers}]]
+];
+
+If[OptionValue[Verbose],Hold[], Hold[FindRoot::lstol]] /. {
+Hold[messageSequence___] :> Quiet[
+DeleteDuplicates[
+Select[
+Check[
+FindRoot[
+equations
+,Evaluate[Sequence@@Table[{{domainSpecifiers}[[j,1]],#[[j]]},{j,Length[{domainSpecifiers}]}]]
+,Evaluate[Sequence @@ FilterRules[{ops}, Options[FindRoot]]]
+],
+##&[]
+]&/@seeds,
+Function[
+repList,
+ReplaceAll[
+Evaluate[And@@Table[
+And[
+Re[{domainSpecifiers}[[j,2]]]<=Re[{domainSpecifiers}[[j,1]]]<=Re[{domainSpecifiers}[[j,3]]],
+Im[{domainSpecifiers}[[j,2]]]<=Im[{domainSpecifiers}[[j,1]]]<=Im[{domainSpecifiers}[[j,3]]]
+]
+,{j,Length[{domainSpecifiers}]}]]
+,repList]
+]
+],
+Function[{repList1,repList2},
+And@@Table[
+Abs[({domainSpecifiers}[[j,1]]/.repList1)-({domainSpecifiers}[[j,1]]/.repList2)]<tolerances[[j]]
+,{j,Length[{domainSpecifiers}]}]
+]
+]
+, {messageSequence}]}
+]
+FindComplexRoots[e1_==e2_,{z_,zmin_,zmax_},ops:OptionsPattern[]]:=FindComplexRoots[{e1==e2},{z,zmin,zmax},ops]
 End[];
 
 
 RandomSobolComplexes::usage="RandomSobolComplexes[{zmin, zmax}, n] generates a low-discrepancy Sobol sequence of n quasirandom complex numbers in the rectangle with corners zmin and zmax.
 
-RandomSobolComplexes[{{z1min,z1max},{z2min,z2max},\[Ellipsis]},n] generates a low-discrepancy Sobol sequence of n quasirandom complex numbers in the multi-dimensional rectangle with corners {z1min,z1max},{z2min,z2max},\[Ellipsis].
-";
+RandomSobolComplexes[{{z1min,z1max},{z2min,z2max},\[Ellipsis]},n] generates a low-discrepancy Sobol sequence of n quasirandom complex numbers in the multi-dimensional rectangle with corners {z1min,z1max},{z2min,z2max},\[Ellipsis].";
 
 
 Begin["`Private`"];
@@ -113,7 +136,7 @@ End[];
 
 DeterministicComplexGrid::usage="DeterministicComplexGrid[{zmin, zmax}, n] generates a grid of about n equally spaced complex numbers in the rectangle with corners zmin and zmax.
 
-DeterministicComplexGrid[{{z1min,z1max},{z2min,z2max},\[Ellipsis]},n] generates a regular grid of about n equally spaced complex numbers in the multi-dimensional rectangle with corners {z1min,z1max},{z2min,z2max},\[Ellipsis]."
+DeterministicComplexGrid[{{z1min,z1max},{z2min,z2max},\[Ellipsis]},n] generates a regular grid of about n equally spaced complex numbers in the multi-dimensional rectangle with corners {z1min,z1max},{z2min,z2max},\[Ellipsis].";
 
 
 Begin["`Private`"];
@@ -133,7 +156,7 @@ DeterministicComplexGrid[{zmin_?NumericQ,zmax_?NumericQ},number_]:=Deterministic
 End[];
 
 
-cleanContourPlot::usage="cleanContourPlot[plot] Cleans up a contour plot by coalescing complex polygons into single FilledCurve instances. See MM.SE/a/3279 for source and documentation."
+cleanContourPlot::usage="cleanContourPlot[plot] Cleans up a contour plot by coalescing complex polygons into single FilledCurve instances. See MM.SE/a/3279 for source and documentation.";
 
 
 Begin["`Private`"];
@@ -165,7 +188,7 @@ cleanContourPlot[cp_] :=
 End[];
 
 
-profileDynamics::usage="profileDynamics[dynamicsConstruct] Produces a profiling suite for the Dynamic statements in its argument.  See MM.SE/a/8047 for source and documentation."!
+profileDynamics::usage="profileDynamics[dynamicsConstruct] Produces a profiling suite for the Dynamic statements in its argument. See MM.SE/a/8047 for source and documentation.";
 
 
 Begin["`Private`"];
@@ -206,4 +229,4 @@ profileDynamics[d_, OptionsPattern[]] := With[
 End[];
 
 
-End[];
+EndPackage[];
