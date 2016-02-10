@@ -9,7 +9,8 @@ Cell[TextData[{
  StyleBox["EPToolbox.m", "Code"],
  " package file. For examples and documentation see the ",
  StyleBox["EPToolbox usage.nb", "Code"],
- " notebook."
+ " notebook.\n\n\[Copyright] Emilio Pisanty, 2014-2016, available under the \
+CC-BY-SA 4.0 license."
 }], "Text"],
 
 Cell[CellGroupData[{
@@ -1090,7 +1091,7 @@ StyleDefinitions->Notebook[{
     FontVariations -> {
      "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
       "Underline" -> False}]}, 
-  WindowMargins -> {{1037, Automatic}, {52, Automatic}}, Visible -> False, 
+  WindowMargins -> {{306, Automatic}, {Automatic, 65}}, Visible -> False, 
   FrontEndVersion -> "10.1 for Linux x86 (64-bit) (March 23, 2015)", 
   StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
 ]
