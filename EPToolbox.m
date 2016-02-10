@@ -156,6 +156,11 @@ DeterministicComplexGrid[{zmin_?NumericQ,zmax_?NumericQ},number_]:=Deterministic
 End[];
 
 
+Unprotect[RandomComplex];
+RandomComplex[{range1_List,moreRanges___},number_]:=Transpose[RandomComplex[#,number]&/@{range1,moreRanges}]
+Protect[RandomComplex];
+
+
 cleanContourPlot::usage="cleanContourPlot[plot] Cleans up a contour plot by coalescing complex polygons into single FilledCurve instances. See MM.SE/a/3279 for source and documentation.";
 
 

@@ -19,255 +19,13 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"BeginPackage", "[", "\"\<EPToolbox`\>\"", "]"}], ";"}]], "Input",
  InitializationCell->True]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
 Cell["Complex root finder", "Subsection"],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"FindComplexRoots", "[", 
-   RowBox[{"equations_List", ",", "domainSpecifiers__", ",", " ", 
-    RowBox[{"ops", " ", ":", " ", 
-     RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], " ", ":=", " ", 
-  RowBox[{"Block", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"seeds", ",", "tolerances"}], "}"}], ",", "\[IndentingNewLine]", 
-    
-    RowBox[{
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"!", " ", 
-         RowBox[{"IntegerQ", "[", 
-          RowBox[{"Rationalize", "[", 
-           RowBox[{"OptionValue", "[", "Seeds", "]"}], "]"}], "]"}]}], " ", "||",
-         " ", 
-        RowBox[{
-         RowBox[{"OptionValue", "[", "Seeds", "]"}], "\[LessEqual]", "0"}]}], 
-       ",", 
-       RowBox[{"Message", "[", 
-        RowBox[{
-         RowBox[{"FindComplexRoots", "::", "seeds"}], ",", " ", 
-         RowBox[{"OptionValue", "[", "Seeds", "]"}]}], "]"}]}], "]"}], ";", 
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{"!", " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"OptionValue", "[", "Tolerance", "]"}], " ", "===", " ", 
-           "Automatic"}], " ", "||", " ", 
-          RowBox[{
-           RowBox[{"OptionValue", "[", "Tolerance", "]"}], "\[GreaterEqual]", 
-           "0"}]}], ")"}]}], ",", 
-       RowBox[{"Message", "[", 
-        RowBox[{
-         RowBox[{"FindComplexRoots", "::", "tol"}], ",", " ", 
-         RowBox[{"OptionValue", "[", "Seeds", "]"}]}], "]"}]}], "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"seeds", "=", 
-      RowBox[{
-       RowBox[{"OptionValue", "[", "SeedGenerator", "]"}], "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"{", "domainSpecifiers", "}"}], "\[LeftDoubleBracket]", 
-         RowBox[{"All", ",", 
-          RowBox[{"{", 
-           RowBox[{"2", ",", "3"}], "}"}]}], "\[RightDoubleBracket]"}], ",", 
-        RowBox[{"OptionValue", "[", "Seeds", "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"tolerances", "=", 
-      RowBox[{"Which", "[", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"ListQ", "[", 
-         RowBox[{"OptionValue", "[", "Tolerance", "]"}], "]"}], ",", 
-        RowBox[{"OptionValue", "[", "Tolerance", "]"}], ",", 
-        "\[IndentingNewLine]", "True", ",", 
-        RowBox[{"ConstantArray", "[", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"Which", "[", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"NumberQ", "[", 
-             RowBox[{"OptionValue", "[", "Tolerance", "]"}], "]"}], ",", 
-            RowBox[{"OptionValue", "[", "Tolerance", "]"}], ",", 
-            "\[IndentingNewLine]", "True", ",", 
-            RowBox[{"10", "^", 
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"NumberQ", "[", 
-                RowBox[{"OptionValue", "[", "WorkingPrecision", "]"}], "]"}], 
-               ",", " ", 
-               RowBox[{"2", "-", 
-                RowBox[{"OptionValue", "[", "WorkingPrecision", "]"}]}], ",", 
-               
-               RowBox[{"2", "-", "$MachinePrecision"}]}], "]"}]}]}], 
-           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
-          RowBox[{"Length", "[", 
-           RowBox[{"{", "domainSpecifiers", "}"}], "]"}]}], "]"}]}], 
-       "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"OptionValue", "[", "Verbose", "]"}], ",", 
-        RowBox[{"Hold", "[", "]"}], ",", " ", 
-        RowBox[{"Hold", "[", 
-         RowBox[{"FindRoot", "::", "lstol"}], "]"}]}], "]"}], " ", "/.", " ", 
-      
-      RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Hold", "[", "messageSequence___", "]"}], " ", ":>", " ", 
-        RowBox[{"Quiet", "[", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"DeleteDuplicates", "[", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"Select", "[", "\[IndentingNewLine]", 
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{"Check", "[", "\[IndentingNewLine]", 
-                 RowBox[{
-                  RowBox[{"FindRoot", "[", "\[IndentingNewLine]", 
-                   RowBox[{"equations", "\[IndentingNewLine]", ",", 
-                    RowBox[{"Evaluate", "[", 
-                    RowBox[{"Sequence", "@@", 
-                    RowBox[{"Table", "[", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{
-                    "#", "\[LeftDoubleBracket]", "j", 
-                    "\[RightDoubleBracket]"}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"j", ",", 
-                    RowBox[{"Length", "[", 
-                    RowBox[{"{", "domainSpecifiers", "}"}], "]"}]}], "}"}]}], 
-                    "]"}]}], "]"}], "\[IndentingNewLine]", ",", 
-                    RowBox[{"Evaluate", "[", 
-                    RowBox[{"Sequence", " ", "@@", " ", 
-                    RowBox[{"FilterRules", "[", 
-                    RowBox[{
-                    RowBox[{"{", "ops", "}"}], ",", " ", 
-                    RowBox[{"Options", "[", "FindRoot", "]"}]}], "]"}]}], 
-                    "]"}]}], "\[IndentingNewLine]", "]"}], ",", 
-                  "\[IndentingNewLine]", 
-                  RowBox[{
-                   RowBox[{"##", "&"}], "[", "]"}]}], "\[IndentingNewLine]", 
-                 "]"}], "&"}], "/@", "seeds"}], ",", "\[IndentingNewLine]", 
-              RowBox[{"Function", "[", "\[IndentingNewLine]", 
-               RowBox[{"repList", ",", "\[IndentingNewLine]", 
-                RowBox[{"ReplaceAll", "[", "\[IndentingNewLine]", 
-                 RowBox[{
-                  RowBox[{"Evaluate", "[", 
-                   RowBox[{"And", "@@", 
-                    RowBox[{"Table", "[", "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{"And", "[", "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"Re", "[", 
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "2"}], "\[RightDoubleBracket]"}], "]"}],
-                     "\[LessEqual]", 
-                    RowBox[{"Re", "[", 
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "1"}], "\[RightDoubleBracket]"}], "]"}],
-                     "\[LessEqual]", 
-                    RowBox[{"Re", "[", 
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "3"}], "\[RightDoubleBracket]"}], 
-                    "]"}]}], ",", "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{"Im", "[", 
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "2"}], "\[RightDoubleBracket]"}], "]"}],
-                     "\[LessEqual]", 
-                    RowBox[{"Im", "[", 
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "1"}], "\[RightDoubleBracket]"}], "]"}],
-                     "\[LessEqual]", 
-                    RowBox[{"Im", "[", 
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "3"}], "\[RightDoubleBracket]"}], 
-                    "]"}]}]}], "\[IndentingNewLine]", "]"}], 
-                    "\[IndentingNewLine]", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"j", ",", 
-                    RowBox[{"Length", "[", 
-                    RowBox[{"{", "domainSpecifiers", "}"}], "]"}]}], "}"}]}], 
-                    "]"}]}], "]"}], "\[IndentingNewLine]", ",", "repList"}], 
-                 "]"}]}], "\[IndentingNewLine]", "]"}]}], 
-             "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"Function", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{"repList1", ",", "repList2"}], "}"}], ",", 
-              "\[IndentingNewLine]", 
-              RowBox[{"And", "@@", 
-               RowBox[{"Table", "[", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Abs", "[", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "1"}], "\[RightDoubleBracket]"}], "/.", 
-                    "repList1"}], ")"}], "-", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"{", "domainSpecifiers", "}"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"j", ",", "1"}], "\[RightDoubleBracket]"}], "/.", 
-                    "repList2"}], ")"}]}], "]"}], "<", 
-                  RowBox[{
-                  "tolerances", "\[LeftDoubleBracket]", "j", 
-                   "\[RightDoubleBracket]"}]}], "\[IndentingNewLine]", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"j", ",", 
-                   RowBox[{"Length", "[", 
-                    RowBox[{"{", "domainSpecifiers", "}"}], "]"}]}], "}"}]}], 
-                "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
-           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", " ", 
-          RowBox[{"{", "messageSequence", "}"}]}], "]"}]}], "}"}]}]}]}], 
-   "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"FindComplexRoots", "[", 
-   RowBox[{
-    RowBox[{"e1_", "==", "e2_"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"z_", ",", "zmin_", ",", "zmax_"}], "}"}], ",", 
-    RowBox[{"ops", ":", 
-     RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
-  RowBox[{"FindComplexRoots", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"e1", "==", "e2"}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"z", ",", "zmin", ",", "zmax"}], "}"}], ",", "ops"}], 
-   "]"}]}], "\[IndentingNewLine]"}], "Input"],
+Cell[BoxData["FindComplexRoots"], "Input"],
 
 Cell[BoxData[{
  RowBox[{
@@ -592,7 +350,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]}], "Input",
  InitializationCell->True]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -939,6 +697,42 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]}], "Input",
  InitializationCell->True]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["RandomComplex", "Subsubsection"],
+
+Cell[TextData[{
+ "Updating ",
+ StyleBox["RandomComplex", "Code"],
+ " to handle input of the form ",
+ StyleBox["RandomComplex[{{0, 1+\[ImaginaryI]}, {2, 3+\[ImaginaryI]}}, n]", 
+  "Code"],
+ "."
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Unprotect", "[", "RandomComplex", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"RandomComplex", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"range1_List", ",", "moreRanges___"}], "}"}], ",", "number_"}], 
+   "]"}], ":=", 
+  RowBox[{"Transpose", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"RandomComplex", "[", 
+      RowBox[{"#", ",", "number"}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{"range1", ",", "moreRanges"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Protect", "[", "RandomComplex", "]"}], ";"}]}], "Input",
+ InitializationCell->True]
 }, Closed]]
 }, Open  ]],
 
@@ -1277,15 +1071,15 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"EndPackage", "[", "]"}], ";"}]], "Input",
  InitializationCell->True]
-}, Open  ]]
+}, Closed]]
 }, Open  ]]
 },
 AutoGeneratedPackage->Automatic,
-WindowSize->{1855, 1056},
+WindowSize->{1223, 776},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 TrackCellChangeTimes->False,
-FrontEndVersion->"10.1 for Linux x86 (64-bit) (March 23, 2015)",
+FrontEndVersion->"10.3 for Linux x86 (64-bit) (October 9, 2015)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Default.nb"]], 
@@ -1295,7 +1089,7 @@ StyleDefinitions->Notebook[{
     FontVariations -> {
      "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
       "Underline" -> False}]}, Visible -> False, FrontEndVersion -> 
-  "10.1 for Linux x86 (64-bit) (March 23, 2015)", StyleDefinitions -> 
+  "10.3 for Linux x86 (64-bit) (October 9, 2015)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"]
 ]
 
