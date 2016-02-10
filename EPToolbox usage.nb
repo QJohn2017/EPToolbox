@@ -104,7 +104,7 @@ z1min, z1max}, {z2, z2min, z2max}, \[Ellipsis]] attempts to find complex \
 roots of the given system of equations in the multidimensional complex \
 rectangle with corners z1min, z1max, z2min, z2max, \[Ellipsis].\"\>", 
   "MSG"]], "Print", "PrintUsage",
- CellTags->"Info3664095793-6574038"],
+ CellTags->"Info3664099216-6574038"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -131,7 +131,7 @@ Cell[BoxData[
  StyleBox["\<\"Seeds is an option for FindComplexRoots which determines how \
 many initial seeds are used to attempt to find roots of the given equation.\"\
 \>", "MSG"]], "Print", "PrintUsage",
- CellTags->"Info3664095793-6574038"],
+ CellTags->"Info3664099216-6574038"],
 
 Cell[BoxData[
  StyleBox["\<\"SeedGenerator is an option for FindComplexRoots which \
@@ -140,7 +140,7 @@ FindRoot call. Its value can be RandomComplex, RandomNiederreiterComplexes, \
 RandomSobolComplexes, DeterministicComplexGrid, or any function f such that \
 f[{zmin, zmax}, n] returns n complex numbers in the rectancle with corners \
 zmin and zmax.\"\>", "MSG"]], "Print", "PrintUsage",
- CellTags->"Info3664095793-6574038"],
+ CellTags->"Info3664099216-6574038"],
 
 Cell[BoxData[
  RowBox[{
@@ -152,7 +152,7 @@ specifies the tolerance that should be allowed in computing results.\"\>",
    Active->True,
    BaseStyle->"Link",
    ButtonData->"paclet:ref/Tolerance"]}]], "Print", "PrintUsage",
- CellTags->"Info3664095793-6574038"]
+ CellTags->"Info3664099216-6574038"]
 }, Open  ]]
 }, Open  ]]
 }, Closed]],
@@ -13223,6 +13223,15 @@ StyleDefinitions->Notebook[{
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
+ "Info3664099216-6574038"->{
+  Cell[3009, 98, 531, 8, 95, "Print",
+   CellTags->"Info3664099216-6574038"],
+  Cell[4457, 129, 244, 4, 42, "Print",
+   CellTags->"Info3664099216-6574038"],
+  Cell[4704, 135, 479, 7, 78, "Print",
+   CellTags->"Info3664099216-6574038"],
+  Cell[5186, 144, 405, 10, 44, "Print",
+   CellTags->"Info3664099216-6574038"]},
  "Info3664095694-6574038"->{
   Cell[550741, 13072, 2237, 35, 120, "Print",
    CellTags->"Info3664095694-6574038"],
@@ -13231,22 +13240,13 @@ CellTagsIndex->{
   Cell[553494, 13119, 540, 9, 113, "Print",
    CellTags->"Info3664095694-6574038"],
   Cell[554037, 13130, 490, 7, 95, "Print",
-   CellTags->"Info3664095694-6574038"]},
- "Info3664095793-6574038"->{
-  Cell[3009, 98, 531, 8, 95, "Print",
-   CellTags->"Info3664095793-6574038"],
-  Cell[4457, 129, 244, 4, 42, "Print",
-   CellTags->"Info3664095793-6574038"],
-  Cell[4704, 135, 479, 7, 78, "Print",
-   CellTags->"Info3664095793-6574038"],
-  Cell[5186, 144, 405, 10, 44, "Print",
-   CellTags->"Info3664095793-6574038"]}
+   CellTags->"Info3664095694-6574038"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info3664095694-6574038", 556347, 13225},
- {"Info3664095793-6574038", 556714, 13234}
+ {"Info3664099216-6574038", 556347, 13225},
+ {"Info3664095694-6574038", 556693, 13234}
  }
 *)
 (*NotebookFileOutline
@@ -13272,15 +13272,15 @@ Cell[2362, 83, 110, 1, 31, "Text"],
 Cell[CellGroupData[{
 Cell[2497, 88, 509, 8, 121, "Input"],
 Cell[3009, 98, 531, 8, 95, "Print",
- CellTags->"Info3664095793-6574038"],
+ CellTags->"Info3664099216-6574038"],
 Cell[3543, 108, 889, 17, 77, "Output"],
 Cell[CellGroupData[{
 Cell[4457, 129, 244, 4, 42, "Print",
- CellTags->"Info3664095793-6574038"],
+ CellTags->"Info3664099216-6574038"],
 Cell[4704, 135, 479, 7, 78, "Print",
- CellTags->"Info3664095793-6574038"],
+ CellTags->"Info3664099216-6574038"],
 Cell[5186, 144, 405, 10, 44, "Print",
- CellTags->"Info3664095793-6574038"]
+ CellTags->"Info3664099216-6574038"]
 }, Open  ]]
 }, Open  ]]
 }, Closed]],

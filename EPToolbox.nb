@@ -27,8 +27,6 @@ Cell[CellGroupData[{
 
 Cell["Complex root finder", "Subsection"],
 
-Cell[BoxData["FindComplexRoots"], "Input"],
-
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -93,10 +91,18 @@ zmin and zmax.\>\""}], ";"}],
   ";"}], "\n", 
  RowBox[{
   RowBox[{
-   RowBox[{
-    RowBox[{"FindComplexRoots", "::", "tol"}], " ", "=", " ", 
-    "\"\<Value of option Tolerance -> `1` is not Automatic or a number in [0,\
-\[Infinity]).\>\""}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+   RowBox[{"FindComplexRoots", "::", "tol"}], " ", "=", " ", 
+   "\"\<Value of option Tolerance -> `1` is not Automatic or a number in [0,\
+\[Infinity]).\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$MessageGroups", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{"$MessageGroups", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<FindComplexRoots\>\"", "\[RuleDelayed]", 
+       RowBox[{"{", 
+        RowBox[{"FindRoot", "::", "lstol"}], "}"}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Protect", "[", "Seeds", "]"}], ";"}], "\n", 
  RowBox[{
