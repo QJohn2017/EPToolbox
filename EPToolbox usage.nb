@@ -1,22 +1,3 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 10.1' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[    560848,      13378]
-NotebookOptionsPosition[    555524,      13203]
-NotebookOutlinePosition[    557186,      13252]
-CellTagsIndexPosition[    557054,      13246]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
@@ -404,9 +385,9 @@ Cell["Timings and generation of the benchmarks", "Subsubsection",
 
 Cell[CellGroupData[{
 
-Cell[, "Input"],
+Cell["Null", "Input"],
 
-Cell[, "Output"]
+Cell["Null", "Output"]
 }, Open  ]]
 }, Closed]],
 
@@ -415,13 +396,13 @@ Cell[CellGroupData[{
 Cell["Number of roots found vs number of seeds", "Subsubsection",
  CellChangeTimes->{{3.641897939784671*^9, 3.6418979719680147`*^9}}],
 
-Cell[, "Text"],
+Cell["Null", "Text"],
 
 Cell[CellGroupData[{
 
-Cell[, "Input"],
+Cell["Null", "Input"],
 
-Cell[, "Output"]
+Cell["Null", "Output"]
 }, Open  ]]
 }, Closed]],
 
@@ -433,7 +414,7 @@ Cell["More detailed statistics on the distribution of roots found", \
 
 Cell[CellGroupData[{
 
-Cell[, "Input"],
+Cell["Null", "Input"],
 
 Cell[BoxData[
  GraphicsBox[{{
@@ -464,7 +445,6 @@ Cell[BoxData[
                0.000823}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              
               LineBox[{{{1., 0.0007245}, {1., 0.000571}}, {{1., 0.00095}, {1.,
                 0.001962}}}]}, {
               GrayLevel[0], 
@@ -3236,7 +3216,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{28.585609804643717`, 0.0223835}, {
               29.414390195356283`, 0.0223835}, {29.414390195356283`, 
               0.0207985}, {28.585609804643717`, 
@@ -3337,7 +3316,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{29.585609804643717`, 0.022960500000000002`}, {
               30.414390195356283`, 0.022960500000000002`}, {
               30.414390195356283`, 0.021452}, {29.585609804643717`, 
@@ -3651,8 +3629,8 @@ Cell[BoxData[
            GraphicsGroupBox[{Antialiasing -> False, 
              
              PolygonBox[{{2.5856098046437177`, 0.002185}, {
-              3.4143901953562823`, 0.002185}, {3.4143901953562823`, 0.002107},
-               {2.5856098046437177`, 0.002107}}], {}, {{}, {}}, {}, {
+              3.4143901953562823`, 0.002185}, {3.4143901953562823`, 
+              0.002107}, {2.5856098046437177`, 0.002107}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
@@ -6235,6 +6213,7 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
+             
              PolygonBox[{{28.585609804643717`, 0.023129}, {
               29.414390195356283`, 0.023129}, {29.414390195356283`, 
               0.022102}, {28.585609804643717`, 0.022102}}], {}, {{}, {}}, {}, {
@@ -6335,6 +6314,7 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
+             
              PolygonBox[{{29.585609804643717`, 0.0232875}, {
               30.414390195356283`, 0.0232875}, {30.414390195356283`, 
               0.022418}, {29.585609804643717`, 0.022418}}], {}, {{}, {}}, {}, {
@@ -6453,7 +6433,6 @@ Cell[BoxData[
              
               GrayLevel[0], 
               GrayLevel[1], 
-              
               LineBox[{{1.4143901953562823`, 0.000813}, {0.5856098046437177, 
                0.000813}}]}, {}, {
               GrayLevel[0], 
@@ -6552,7 +6531,6 @@ Cell[BoxData[
               0.001442}, {1.5856098046437177`, 0.001442}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
-              
               LineBox[{{2.4143901953562823`, 0.0015545}, {1.5856098046437177`,
                 0.0015545}}]}, {}, {
               GrayLevel[0], 
@@ -6651,7 +6629,6 @@ Cell[BoxData[
               2.5856098046437177`, 0.002089}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
-              
               LineBox[{{3.4143901953562823`, 0.0022275000000000003`}, {
                2.5856098046437177`, 0.0022275000000000003`}}]}, {}, {
               GrayLevel[0], 
@@ -8156,6 +8133,7 @@ Cell[BoxData[
               LineBox[{{{18.20719509767814, 0.012674}, {17.79280490232186, 
                0.012674}}, {{18.20719509767814, 0.020121}, {17.79280490232186,
                 0.020121}}}]}, {}}]},
+          
           ImageSizeCache->{{349.5857864376269, 368.4142135623731}, {
            40.585786437626886`, 90.4142135623731}}],
          StyleBox[
@@ -8235,7 +8213,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{18.585609804643717`, 0.014671}, {
               19.414390195356283`, 0.014671}, {19.414390195356283`, 
               0.013836}, {18.585609804643717`, 0.013836}}], {}, {{}, {}}, {}, {
@@ -8334,7 +8311,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{19.585609804643717`, 0.015021}, {
               20.414390195356283`, 0.015021}, {20.414390195356283`, 
               0.014357}, {19.585609804643717`, 0.014357}}], {}, {{}, {}}, {}, {
@@ -8432,7 +8408,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{20.585609804643717`, 0.016041}, {
               21.414390195356283`, 0.016041}, {21.414390195356283`, 
               0.015217999999999999`}, {20.585609804643717`, 
@@ -8531,7 +8506,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{21.585609804643717`, 0.017331}, {
               22.414390195356283`, 0.017331}, {22.414390195356283`, 
               0.016321}, {21.585609804643717`, 0.016321}}], {}, {{}, {}}, {}, {
@@ -8629,7 +8603,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{22.585609804643717`, 0.017673}, {
               23.414390195356283`, 0.017673}, {23.414390195356283`, 
               0.016804}, {22.585609804643717`, 0.016804}}], {}, {{}, {}}, {}, {
@@ -8728,7 +8701,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{23.585609804643717`, 0.018221}, {
               24.414390195356283`, 0.018221}, {24.414390195356283`, 
               0.0172795}, {23.585609804643717`, 
@@ -8828,7 +8800,6 @@ Cell[BoxData[
               AbsoluteThickness[1.5], 
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
-             
              PolygonBox[{{24.585609804643717`, 0.018786999999999998`}, {
               25.414390195356283`, 0.018786999999999998`}, {
               25.414390195356283`, 0.017960499999999997`}, {
@@ -9147,6 +9118,7 @@ Cell[BoxData[
                0.0212935}, {28., 0.027319}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
+              
               LineBox[{{{28.20719509767814, 0.019622}, {27.79280490232186, 
                0.019622}}, {{28.20719509767814, 0.027319}, {27.79280490232186,
                 0.027319}}}]}, {}}]},
@@ -11865,7 +11837,6 @@ Cell[BoxData[
               LineBox[{{{25.20719509767814, 0.030745}, {24.79280490232186, 
                0.030745}}, {{25.20719509767814, 0.04386}, {24.79280490232186, 
                0.04386}}}]}, {}}]},
-          
           ImageSizeCache->{{483.5857864376269, 
            502.4142135623731}, {-108.4142135623731, -22.585786437626894`}}],
          StyleBox[
@@ -12067,7 +12038,6 @@ Cell[BoxData[
               LineBox[{{{27.20719509767814, 0.035193}, {26.79280490232186, 
                0.035193}}, {{27.20719509767814, 0.046454}, {26.79280490232186,
                 0.046454}}}]}, {}}]},
-          
           ImageSizeCache->{{521.5857864376269, 
            540.4142135623731}, {-124.4142135623731, -50.58578643762689}}],
          StyleBox[
@@ -12268,7 +12238,6 @@ Cell[BoxData[
               LineBox[{{{29.20719509767814, 0.035093}, {28.79280490232186, 
                0.035093}}, {{29.20719509767814, 0.052887}, {28.79280490232186,
                 0.052887}}}]}, {}}]},
-          
           ImageSizeCache->{{559.5857864376269, 
            578.4142135623731}, {-164.4142135623731, -49.58578643762689}}],
          StyleBox[
@@ -13157,9 +13126,9 @@ complex plane\
 
 Cell[CellGroupData[{
 
-Cell[, "Input"],
+Cell["Null", "Input"],
 
-Cell[, "Output"]
+Cell["Null", "Output"]
 }, Open  ]]
 }, Closed]],
 
@@ -13169,9 +13138,9 @@ Cell["Timings statistics", "Subsubsection"],
 
 Cell[CellGroupData[{
 
-Cell[, "Input"],
+Cell["Null", "Input"],
 
-Cell[, "Output"]
+Cell["Null", "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
@@ -13180,13 +13149,13 @@ Cell[CellGroupData[{
 
 Cell["cleanContourPlot", "Subsection"],
 
-Cell[, "Text"],
+Cell["Null", "Text"],
 
 Cell[CellGroupData[{
 
-Cell[, "Input"],
+Cell["Null", "Input"],
 
-Cell[, "Output"]
+Cell["Null", "Output"]
 }, Open  ]]
 }, Closed]],
 
@@ -13194,15 +13163,16 @@ Cell[CellGroupData[{
 
 Cell["profileDynamics", "Subsection"],
 
-Cell[, "Text"],
+Cell["Null", "Text"],
 
-Cell[, "Input"]
+Cell["Null", "Input"]
 }, Closed]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1215, 1000},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
 TrackCellChangeTimes->False,
 FrontEndVersion->"10.1 for Linux x86 (64-bit) (March 23, 2015)",
 StyleDefinitions->Notebook[{
@@ -13213,175 +13183,7 @@ StyleDefinitions->Notebook[{
     FontTracking -> "Plain", 
     FontVariations -> {
      "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
-      "Underline" -> False}]}, 
-  WindowMargins -> {{1037, Automatic}, {52, Automatic}}, Visible -> False, 
-  FrontEndVersion -> "10.1 for Linux x86 (64-bit) (March 23, 2015)", 
-  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+      "Underline" -> False}]}, Visible -> False, FrontEndVersion -> 
+  "10.1 for Linux x86 (64-bit) (March 23, 2015)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
 ]
-(* End of Notebook Content *)
-
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{
- "Info3664099216-6574038"->{
-  Cell[3009, 98, 531, 8, 95, "Print",
-   CellTags->"Info3664099216-6574038"],
-  Cell[4457, 129, 244, 4, 42, "Print",
-   CellTags->"Info3664099216-6574038"],
-  Cell[4704, 135, 479, 7, 78, "Print",
-   CellTags->"Info3664099216-6574038"],
-  Cell[5186, 144, 405, 10, 44, "Print",
-   CellTags->"Info3664099216-6574038"]},
- "Info3664095694-6574038"->{
-  Cell[550741, 13072, 2237, 35, 120, "Print",
-   CellTags->"Info3664095694-6574038"],
-  Cell[552981, 13109, 510, 8, 113, "Print",
-   CellTags->"Info3664095694-6574038"],
-  Cell[553494, 13119, 540, 9, 113, "Print",
-   CellTags->"Info3664095694-6574038"],
-  Cell[554037, 13130, 490, 7, 95, "Print",
-   CellTags->"Info3664095694-6574038"]}
- }
-*)
-(*CellTagsIndex
-CellTagsIndex->{
- {"Info3664099216-6574038", 556347, 13225},
- {"Info3664095694-6574038", 556693, 13234}
- }
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 105, 1, 65, "Subchapter"],
-Cell[CellGroupData[{
-Cell[710, 27, 99, 1, 65, "Section"],
-Cell[812, 30, 142, 3, 31, "Text"],
-Cell[957, 35, 122, 1, 31, "Text"],
-Cell[1082, 38, 212, 6, 32, "Input",
- InitializationCell->True],
-Cell[1297, 46, 422, 12, 70, "Text"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1756, 63, 96, 1, 65, "Section"],
-Cell[CellGroupData[{
-Cell[1877, 68, 104, 1, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[2006, 73, 36, 0, 35, "Subsubsection"],
-Cell[2045, 75, 314, 6, 51, "Text"],
-Cell[2362, 83, 110, 1, 31, "Text"],
-Cell[CellGroupData[{
-Cell[2497, 88, 509, 8, 121, "Input"],
-Cell[3009, 98, 531, 8, 95, "Print",
- CellTags->"Info3664099216-6574038"],
-Cell[3543, 108, 889, 17, 77, "Output"],
-Cell[CellGroupData[{
-Cell[4457, 129, 244, 4, 42, "Print",
- CellTags->"Info3664099216-6574038"],
-Cell[4704, 135, 479, 7, 78, "Print",
- CellTags->"Info3664099216-6574038"],
-Cell[5186, 144, 405, 10, 44, "Print",
- CellTags->"Info3664099216-6574038"]
-}, Open  ]]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[5652, 161, 33, 0, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[5710, 165, 564, 17, 37, "Input"],
-Cell[6277, 184, 799, 19, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7113, 208, 1337, 38, 150, "Input"],
-Cell[8453, 248, 967, 23, 331, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[9469, 277, 48, 0, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[9542, 281, 2460, 68, 304, "Input"],
-Cell[12005, 351, 28, 0, 32, "Output"],
-Cell[12036, 353, 1248, 24, 381, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[13345, 384, 127, 1, 45, "Subsection"],
-Cell[13475, 387, 630, 10, 71, "Text"],
-Cell[CellGroupData[{
-Cell[14130, 401, 131, 1, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[14286, 406, 15, 0, 368, "Input"],
-Cell[14304, 408, 16, 0, 80, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[14369, 414, 133, 1, 29, "Subsubsection"],
-Cell[14505, 417, 14, 0, 33, "Text"],
-Cell[CellGroupData[{
-Cell[14544, 421, 15, 0, 341, "Input"],
-Cell[14562, 423, 16, 0, 891, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[14627, 429, 154, 2, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[14806, 435, 15, 0, 319, "Input"],
-Cell[14824, 437, 534872, 12601, 377, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[549757, 13045, 175, 2, 45, "Subsection"],
-Cell[CellGroupData[{
-Cell[549957, 13051, 36, 0, 35, "Subsubsection"],
-Cell[549996, 13053, 434, 7, 71, "Text"],
-Cell[CellGroupData[{
-Cell[550455, 13064, 261, 4, 99, "Input"],
-Cell[CellGroupData[{
-Cell[550741, 13072, 2237, 35, 120, "Print",
- CellTags->"Info3664095694-6574038"],
-Cell[552981, 13109, 510, 8, 113, "Print",
- CellTags->"Info3664095694-6574038"],
-Cell[553494, 13119, 540, 9, 113, "Print",
- CellTags->"Info3664095694-6574038"],
-Cell[554037, 13130, 490, 7, 95, "Print",
- CellTags->"Info3664095694-6574038"]
-}, Open  ]]
-}, Open  ]],
-Cell[554554, 13141, 263, 6, 51, "Text"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[554854, 13152, 124, 3, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[555003, 13159, 15, 0, 275, "Input"],
-Cell[555021, 13161, 16, 0, 258, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[555086, 13167, 43, 0, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[555154, 13171, 15, 0, 473, "Input"],
-Cell[555172, 13173, 16, 0, 497, "Output"]
-}, Open  ]]
-}, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[555249, 13180, 38, 0, 44, "Subsection"],
-Cell[555290, 13182, 14, 0, 150, "Text"],
-Cell[CellGroupData[{
-Cell[555329, 13186, 15, 0, 121, "Input"],
-Cell[555347, 13188, 16, 0, 643, "Output"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[555412, 13194, 37, 0, 37, "Subsection"],
-Cell[555452, 13196, 14, 0, 109, "Text"],
-Cell[555469, 13198, 15, 0, 473, "Input"]
-}, Closed]]
-}, Open  ]]
-}, Open  ]]
-}
-]
-*)
-
-(* End of internal cache information *)

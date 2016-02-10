@@ -1096,9 +1096,8 @@ StyleDefinitions->Notebook[{
     FontTracking -> "Plain", 
     FontVariations -> {
      "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
-      "Underline" -> False}]}, 
-  WindowMargins -> {{306, Automatic}, {Automatic, 65}}, Visible -> False, 
-  FrontEndVersion -> "10.1 for Linux x86 (64-bit) (March 23, 2015)", 
-  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+      "Underline" -> False}]}, Visible -> False, FrontEndVersion -> 
+  "10.1 for Linux x86 (64-bit) (March 23, 2015)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
 ]
 
