@@ -164,6 +164,10 @@ Protect[RandomComplex];
 End[];
 
 
+PlotRangeClipper::usage="PlotRangeClipper[] produces a white FilledCurve that covers a four-by-four rectangle of ImageScaled coordinates minus a four-by-four rectangle of Scaled coordinates.";
+PlotRangeClipper[]:=Graphics[{White,EdgeForm[],FilledCurve[{Line[ImageScaled/@{{0,0},{1,0},{1,1},{0,1},{0,0}}],Line[Scaled/@{{0,0},{1,0},{1,1},{0,1},{0,0}}]}]}]
+
+
 cleanContourPlot::usage="cleanContourPlot[plot] Cleans up a contour plot by coalescing complex polygons into single FilledCurve instances. See MM.SE/a/3279 for source and documentation.";
 
 
